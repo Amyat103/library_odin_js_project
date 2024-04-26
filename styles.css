@@ -28,10 +28,30 @@ footer{
     background-color: var(--footer-color);
 }
 
+h1{
+    font-size: 25px;
+}
+
 .sidebar{
     flex: 1;
     background-color: var(--sidebar-color);
     display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 40px;
+    justify-content: start;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.radForm{
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .body{

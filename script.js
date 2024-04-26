@@ -3,6 +3,8 @@ const myLibrary = [];
 
 // selectors
 const mainBody = document.getElementsByClassName(".body");
+const form = document.getElementById("#form");
+const addButton = document.getElementById("#submit");
 
 // book constructor
 function Book(title, author, genre, read) {
@@ -17,10 +19,33 @@ function addBookToLibrary(title, author, genre, read) {
     const newBook = new Book(title, author, genre, read);
     myLibrary.push(newBook);
 }
+// helper for createCardBook
+function createAppend(elem, text, parent){
+    const newElem = document.createElement(elem);
+    newElem.textContent(text);
+    parent.createAppend(newElem);
+}
+
+function createCardBook(curBook){
+    const card = document.createElement("div");
+
+    createAppend("h2", curBook.title, card);
+    createAppend("h3", curBook.author, card);
+    createAppend("h3", curBook.genre, card);
+    createAppend("h3", curBook.read, card);
+
+    mainBody.append(card);
+}
 
 // display book onto <main>
 function displayBooks() {
-    
+    mainBody = "";
+
+    for(let i = 0; i < myLibrary.length; i++){
+        createCardBook(myLibrary[i]);
+    }
 }
+
+
 
 
