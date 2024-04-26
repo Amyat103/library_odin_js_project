@@ -1,0 +1,44 @@
+:root{
+    --header-color: #F5DAD2;
+    --main-bg-color: #FCFFE0;
+    --card-color: #BACD92;
+    --footer-color: #75A47F;
+    --sidebar-color: #F7DCB9;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 15%;
+    background-color: var(--header-color);
+}
+
+main{
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    height: 10%;
+    background-color: var(--footer-color);
+}
+
+.sidebar{
+    flex: 1;
+    background-color: var(--sidebar-color);
+    display: flex;
+}
+
+.body{
+    flex: 5;
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
