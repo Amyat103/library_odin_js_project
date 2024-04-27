@@ -4,7 +4,7 @@ const myLibrary = [];
 // selectors
 const mainBody = document.getElementsByClassName(".body");
 const form = document.getElementById("#form");
-const addButton = document.getElementById("#submit");
+const submitButton = document.getElementById("#submit");
 
 // book constructor
 function Book(title, author, genre, read) {
@@ -46,6 +46,21 @@ function displayBooks() {
     }
 }
 
+// when click add with information
+form.addEventListener("submit", (e) =>{
 
+    // get the form's value for book
+    let curTitle = document.getElementById("title");
+    let curAuthor = document.getElementById("author");
+    let curGenre = document.getElementById("genre");
+    let curRead = document.getElementById("radForm");
+
+    // make book
+    addBookToLibrary(curTitle.value, curAuthor.value, curGenre.value, curRead.value);
+
+    // refresh? display
+    displayBooks();
+
+})
 
 

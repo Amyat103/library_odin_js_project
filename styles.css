@@ -14,7 +14,7 @@ body{
 
 header{
     height: 15%;
-    background-color: var(--header-color);
+    background-color: var(--footer-color);
 }
 
 main{
